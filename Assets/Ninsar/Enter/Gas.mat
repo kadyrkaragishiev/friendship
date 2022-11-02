@@ -97,13 +97,13 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Height: 0.03
+    - _Height: 0.1
     - _Metallic: 0
     - _NoiseScale: 10
     - _NoiseSpeed: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.005
-    - _Power: 10
+    - _Power: 12.84
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
@@ -112,7 +112,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _ViewOffset: -1.26
+    - _ViewOffset: 1.76
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
