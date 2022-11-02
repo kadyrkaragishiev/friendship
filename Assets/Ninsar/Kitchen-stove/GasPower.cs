@@ -3,19 +3,22 @@ using UnityEngine;
 public class GasPower : MonoBehaviour
 {
     [SerializeField]
-    private ParticleSystem gas;
+    private Material fireMaterial;
 
     [SerializeField]
-    private ParticleSystem gasEmbers;
-
-    [SerializeField]
-    private float gasMultiplier = 1f;
+    private GameObject gas;
 
     public void OnGasPowerChanged(float gasPower)
     {
-        var mainModule = gas.main;
-        mainModule.startSizeMultiplier = gasPower * gasMultiplier;
-        var embersModule = gasEmbers.main;
-        embersModule.startSizeMultiplier = gasPower * gasMultiplier/10;
+        if (gasPower < 0.05f)
+        {
+            gas.SetActive(false);
+        }
+        else if (gasPower > 0.05f)
+        {
+            gas.SetActive(true);
+        }
+
+        fireMaterial.SetColor("_Color", new Color(gasPower, gasPower, gasPower));
     }
 }

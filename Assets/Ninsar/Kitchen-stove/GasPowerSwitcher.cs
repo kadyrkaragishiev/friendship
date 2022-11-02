@@ -17,6 +17,8 @@ public class GasPowerSwitcher : MonoBehaviour
     [SerializeField]
     private GasPower _gasPower;
 
+    [SerializeField]
+    private float fpsMultiplier = 1;
     private float _lastValue;
 
     private void Start()
@@ -39,6 +41,12 @@ public class GasPowerSwitcher : MonoBehaviour
         if (_lastValue < 0.05f && power > 0.05f)
             enablingSound.Play();
         _lastValue = power;
+    }
+
+    private void FPSChanger(float power)
+    {
+        //Heat CPU by 10% if power is 100%
+        Application.targetFrameRate = (int)(60 + 60 * power * fpsMultiplier);
     }
 }
 
