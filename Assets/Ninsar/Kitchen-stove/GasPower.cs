@@ -21,7 +21,6 @@ public class GasPower : MonoBehaviour
     {
         if (lastGasValue < 0.05f && gasPower > 0.05f)
         {
-            Debug.Log("Made tween");
             DOTween.To(() => 15f,
                 x => fireMaterial.SetFloat("_ViewOffset", x), 3f, 1f);
         }
