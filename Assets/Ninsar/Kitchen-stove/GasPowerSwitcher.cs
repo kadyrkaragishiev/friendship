@@ -48,7 +48,7 @@ public class GasPowerSwitcher : MonoBehaviour
     {
         //Heat CPU by 100% when power is 100%
         Application.targetFrameRate = (int) (60 + power * fpsMultiplier);
-        Debug.Log(60 + power * fpsMultiplier + "   " + Application.targetFrameRate);
+        //Debug.Log(60 + power * fpsMultiplier + "   " + Application.targetFrameRate);
     }
 }
 
