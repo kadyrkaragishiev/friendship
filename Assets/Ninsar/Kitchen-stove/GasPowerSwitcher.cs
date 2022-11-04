@@ -19,6 +19,7 @@ public class GasPowerSwitcher : MonoBehaviour
 
     [SerializeField]
     private float fpsMultiplier = 1;
+
     private float _lastValue;
 
     private void Start()
@@ -27,6 +28,7 @@ public class GasPowerSwitcher : MonoBehaviour
         OnPowerChanged.AddListener(ChangeAudioVolume);
         OnPowerChanged.AddListener(_gasPower.OnGasPowerChanged);
         OnPowerChanged.AddListener(EnablingGasPowerSoundStarter);
+        OnPowerChanged.AddListener(FPSChanger);
     }
 
     private void ChangeAudioVolume(float volume) => baseSound.volume = volume;
@@ -37,7 +39,6 @@ public class GasPowerSwitcher : MonoBehaviour
 
     private void EnablingGasPowerSoundStarter(float power)
     {
-        Debug.Log(_lastValue < 0.05f && power > 0.05f);
         if (_lastValue < 0.05f && power > 0.05f)
             enablingSound.Play();
         _lastValue = power;
@@ -45,8 +46,9 @@ public class GasPowerSwitcher : MonoBehaviour
 
     private void FPSChanger(float power)
     {
-        //Heat CPU by 10% if power is 100%
-        Application.targetFrameRate = (int)(60 + 60 * power * fpsMultiplier);
+        //Heat CPU by 100% when power is 100%
+        Application.targetFrameRate = (int) (60 + power * fpsMultiplier);
+        Debug.Log(60 + power * fpsMultiplier + "   " + Application.targetFrameRate);
     }
 }
 

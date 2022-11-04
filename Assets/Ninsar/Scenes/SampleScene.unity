@@ -306,7 +306,7 @@ MonoBehaviour:
   baseSound: {fileID: 1913985631}
   enablingSound: {fileID: 101575600}
   _gasPower: {fileID: 359820812}
-  fpsMultiplier: 30
+  fpsMultiplier: 120
 --- !u!114 &176325859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10241,7 +10241,7 @@ PrefabInstance:
     - target: {fileID: 7276199961292800706, guid: a1dfa22a50fd56141941b50175f3c4d7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1dfa22a50fd56141941b50175f3c4d7, type: 3}
