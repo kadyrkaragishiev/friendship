@@ -9,7 +9,8 @@
 /[Bb]uilds/
 [Ll]ogs/
 [Mm]emoryCaptures/
-
+/build_BackUpThisFolder_ButDontShipItWithYourGame
+/build_BurstDebugInformation_DoNotShip
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
 
